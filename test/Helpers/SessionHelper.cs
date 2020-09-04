@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Utf8Json;
+using Utf8Json.Resolvers;
 
 namespace test.Helpers
 {
-    public class SessionHelper
+    public static class SessionHelper
     {
-        public static class SessionHelper
-        {
             public static void Set<T>(this ISession session, string key, T value)
             {
                 JsonSerializer.SetDefaultResolver(StandardResolver.AllowPrivateCamelCase);
@@ -20,7 +21,7 @@ namespace test.Helpers
                 string value = session.GetString(key);
                 return value == null ? default : JsonSerializer.Deserialize<T>(value);
             }
-        }
+        
     }
 }
-}
+
