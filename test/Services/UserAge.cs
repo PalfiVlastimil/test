@@ -7,7 +7,7 @@ namespace test.Services
 {
     public class UserAge
     {
-        int Age(DateTime birthDate, DateTime currentDate)
+        public int Age(DateTime birthDate, DateTime currentDate)
         {
             int YearsDiff = new DateTime(currentDate.Subtract(birthDate).Ticks).Year - 1;
 
