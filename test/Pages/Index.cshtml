@@ -7,6 +7,15 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <form method="post">
-        
+        <div class="form-group">
+            <label for="prihlaseni-email">Email</label>
+            <input type="email" class="form-control" asp-for="@Model.FirstName">
+            
+        </div>
+        <div class="form-group">
+            <label for="prihlaseni-heslo">Heslo</label>
+            <input type="password" class="form-control" id="prihlaseni-heslo">
+        </div>
+        <button type="submit" class="btn btn-primary">Přihlásit</button>
     </form>
 </div>
