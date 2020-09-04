@@ -12,12 +12,14 @@ namespace test.Pages
 {
     public class IndexModel : PageModel
     {
+        public User AUser { get; set; }
         private readonly SessionStorage<User> _st;
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(SessionStorage<User> st)
         {
-            st = _st;
+            _st = st;
+            AUser = _st.AUser;
         }
         public IndexModel(ILogger<IndexModel> logger)
         {

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using test.Model;
+using test.Services;
 
 namespace test
 {
@@ -28,7 +29,8 @@ namespace test
             services.AddDistributedMemoryCache();
             services.AddSession();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<Services.SessionStorage<User>>();
+            services.AddScoped<SessionStorage<User>>();
+            services.AddScoped<UserAge>();
             services.AddRazorPages();
         }
 
