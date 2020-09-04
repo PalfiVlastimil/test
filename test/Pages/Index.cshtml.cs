@@ -19,7 +19,7 @@ namespace test.Pages
         public IndexModel(SessionStorage<User> st)
         {
             _st = st;
-            AUser = _st.AUser;
+            
         }
         public IndexModel(ILogger<IndexModel> logger)
         {
