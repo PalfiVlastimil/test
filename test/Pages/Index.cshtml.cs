@@ -30,5 +30,9 @@ namespace test.Pages
         {
 
         }
+        public void OnPost()
+        {
+            
+        }
     }
 }
