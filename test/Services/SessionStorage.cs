@@ -9,7 +9,7 @@ using test.Model;
 
 namespace test.Services
 {
-    public class SessionStorage<T>
+    public class SessionStorage<T> : ISessionStorage<T>
     {
         readonly ISession _session;
         public User Logger { get; set; }
@@ -22,11 +22,15 @@ namespace test.Services
         {
             _session.Set(key, data);
         }
-        
+        public void Load()
+        {
+             Store();
+        }
         public void Store()
         {
             Save(KEY, Logger);
         }
         
+       
     }
 }

@@ -24,14 +24,13 @@ namespace test.Pages
         public void OnGet()
         {
             
+            
 
         }
         public void OnPost()
         {
             _log.Store();
             Login = _log.Logger;
-
-
         }
     }
 }

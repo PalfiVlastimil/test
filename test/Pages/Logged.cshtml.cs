@@ -13,7 +13,7 @@ namespace test.Pages
     {
         private readonly SessionStorage<User> _log;
         public User Login { get; set; }
-        
+        public User Result { get; set; }
         public LoggedModel(SessionStorage<User> log)
         {
             _log = log;
@@ -21,9 +21,12 @@ namespace test.Pages
         }
         public void OnGet()
         {
-            _log.Store();
+            
+            _log.Load();
             Login = _log.Logger;
             
+
+
         }
     }
 }
