@@ -7,8 +7,8 @@ namespace test.Model
 {
     public class User
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
+        public string Email { get; set; } = "ss";
+        public string Password { get; set; } = "ss";
+        public DateTime Birthday { get; set; } 
     }
 }
